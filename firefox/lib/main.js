@@ -5,7 +5,11 @@ var self = require("sdk/self");
 var button = buttons.ActionButton({
   	id: "signup-block",
   	label: "Signup Block",
-  	icon: "./icon.png",
+  	icon: {
+  		"16": "./icon-16.png",
+    	"32": "./icon-32.png",
+    	"64": "./icon-64.png"
+    },
   	onClick: function() {
     	require("sdk/tabs").activeTab.attach({
       		contentScriptFile: [self.data.url("jquery-2.1.3.min.js"), self.data.url("contentscript.js")]

@@ -1,9 +1,9 @@
 {
-  "name": "firefox_addon",
-  "title": "firefox_addon",
+  "name": "signup-block",
+  "title": "signup-block",
   "id": "jid1-qbA1LkvFoEKD5A",
-  "description": "a basic add-on",
-  "author": "",
+  "description": "This add-on allows you to view the content of some websites without signing up. It currently supports Quora.",
+  "author": "Mohamed Moussa and Matthew McLeod",
   "license": "MPL 2.0",
-  "version": "0.1"
+  "version": "0.2"
 }

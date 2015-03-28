@@ -3,12 +3,12 @@ var tabs = require("sdk/tabs");
 var self = require("sdk/self");
 
 var button = buttons.ActionButton({
-  	id: "mozilla-link",
-  	label: "Get past Signup",
+  	id: "signup-block",
+  	label: "Signup Block",
   	icon: "./icon.png",
   	onClick: function() {
     	require("sdk/tabs").activeTab.attach({
-      		contentScriptFile: self.data.url("contentscript.js")
+      		contentScriptFile: [self.data.url("jquery-2.1.3.min.js"), self.data.url("contentscript.js")]
     	});
   	}
 });

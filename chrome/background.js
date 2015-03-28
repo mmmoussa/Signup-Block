@@ -5,3 +5,12 @@ chrome.browserAction.onClicked.addListener(function (tab) { //Fired when User Cl
         console.log("Script Executed .. "); // Notification on Completion
     });
 });
+/*
+chrome.tabs.query({active: true, currentWindow: true}, function(tabs) {
+	console.log("background lvl 1");
+  chrome.tabs.sendMessage(tabs[0].id, {greeting: "hello"}, function(response) {
+	  console.log("background lvl 2");
+    console.log(response.farewell);
+  });
+});
+*/

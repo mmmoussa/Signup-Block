@@ -1,1 +1,1 @@
-# Chrome-Signup-Block
+# Signup-Block

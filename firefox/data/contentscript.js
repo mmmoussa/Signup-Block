@@ -34,4 +34,11 @@ $(document).ready(function() {
 			removeList(itemsToRemove)
 		}, 2000);
 	}
+	else if ((url).indexOf('nationalpost') != -1){
+		var itemsToRemove = ['#gregbox-outer', '#gregbox-signInTab', '#gregbox-closeBtn', '#destination_publishing_iframe_postmedia_0']
+		removeList(itemsToRemove)
+		$('div').filter(function() {
+		    return $(this).css('z-index') == '99998';
+		}).remove();
+	}
 })

@@ -1,9 +1,16 @@
 {
-  "name": "signup-block",
-  "title": "signup-block",
-  "id": "jid1-qbA1LkvFoEKD5A",
-  "description": "This add-on allows you to view the content of some websites without signing up. It currently supports Quora.",
-  "author": "Mohamed Moussa and Matthew McLeod",
-  "license": "MPL 2.0",
-  "version": "0.3"
+	"name": "signup-block",
+	"title": "signup-block",
+	"id": "jid1-qbA1LkvFoEKD5A",
+	"description": "This add-on allows you to view the content of some websites without signing up. It currently supports Quora.",
+	"author": "Mohamed Moussa and Matthew McLeod",
+	"license": "MPL 2.0",
+	"version": "0.3",
+	"preferences": [{
+        "name": "AutoRun",
+        "title": "Auto Launch",
+        "description": "Choose whether signup pages will be automatically removed when a page loads, or whether the user has manual control.",
+        "type": "bool",
+        "value": false
+	}]
 }

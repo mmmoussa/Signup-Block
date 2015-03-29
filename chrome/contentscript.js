@@ -24,7 +24,6 @@ $(document).ready(function() {
 		
 		var interval = setInterval(function(){
 			if ($('.UnauthBanner')){
-				console.log("cleared bottom banner");
 				$('.UnauthBanner').remove();
 				clearInterval(interval);
 			}

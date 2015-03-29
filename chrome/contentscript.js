@@ -1,23 +1,37 @@
-
 $(document).ready(function() {
-	console.log('running')
+	
+		
+	var removeElement = function($element){
+		$element ? $element.remove() : null;
+	}
+	
+	var removeList = function(list){
+		for (var i = 0; i < list.length; i++){
+						removeElement($(itemsToRemove[i]));
+
+		}
+	}
+	
 	var url = document.URL;
 	if ((url).indexOf('quora') != -1){
-		$('.modal_signup_dialog').remove();
-		$('.modal_signup_background').remove();
-		$('.modal_signup_facepile').remove();
+		var itemsToRemove = ['.modal_signup_dialog','.modal_signup_background','.modal_signup_facepile']
+		removeList(itemsToRemove)
+
 	}
 	else if ((url).indexOf('pinterest') != -1){
-		$('.modalScroller').remove();
-		$('.modalContainer').remove();
-		$('.modalMask').remove();
+		var itemsToRemove = ['.modalScroller','.modalContainer','.modalMask'] 
+		removeList(itemsToRemove)
 		
-		setTimeout(function(){ 
-			console.log("timeout3 triggered");
-			$('.modalScroller').remove();
-			$('.modalContainer').remove();
-			$('.modalMask').remove();
+		var interval = setInterval(function(){
+			if ($('.UnauthBanner')){
+				console.log("cleared bottom banner");
+				$('.UnauthBanner').remove();
+				clearInterval(interval);
+			}
+		},500);
+		
+		setTimeout(function(){
+			removeList(itemsToRemove)
 		}, 2000);
 	}
 })
-

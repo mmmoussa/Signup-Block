@@ -2,7 +2,7 @@
   "manifest_version": 2,
 
   "name": "Signup Block",
-  "description": "This add-on allows you to view the content of some websites without signing up. It currently supports Quora.",
+  "description": "This add-on allows you to view the content of some websites without signing up. It currently supports Quora and Pinterest.",
   "version": "0.3",
   "icons": {
     "16": "icon-16.png",

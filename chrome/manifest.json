@@ -9,7 +9,10 @@
     "48": "icon-48.png",
     "128": "icon-128.png"
   },
-  "options_page": "options.html",
+  "options_ui": {
+    "page": "options.html",
+    "chrome_style": true
+  },
 
   "browser_action": {
     "default_icon": "icon-128.png",
@@ -23,6 +26,7 @@
   "permissions": [
     "tabs",
     "activeTab",
-    "http://*/*"
+    "http://*/*",
+    "storage"
   ]
 }

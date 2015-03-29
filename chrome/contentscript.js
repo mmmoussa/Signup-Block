@@ -1,8 +1,8 @@
 
-$( document ).ready(function() {
+$(document).ready(function() {
+	console.log('running')
 	var url = document.URL;
-	if ( (url).indexOf('quora') != -1){
-		console.log("You are at the quora website");
+	if ((url).indexOf('quora') != -1){
 		$('.modal_signup_dialog').remove();
 		$('.modal_signup_background').remove();
 		$('.modal_signup_facepile').remove();

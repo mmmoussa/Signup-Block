@@ -11,6 +11,13 @@ $(document).ready(function() {
 		$('.modalScroller').remove();
 		$('.modalContainer').remove();
 		$('.modalMask').remove();
+		
+		setTimeout(function(){ 
+			console.log("timeout3 triggered");
+			$('.modalScroller').remove();
+			$('.modalContainer').remove();
+			$('.modalMask').remove();
+		}, 2000);
 	}
 })
 

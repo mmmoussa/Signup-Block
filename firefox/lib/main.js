@@ -3,10 +3,12 @@ var tabs = require("sdk/tabs");
 var self = require("sdk/self");
 var preferences = require("sdk/simple-prefs").prefs;
 
+/*
 function onPrefChange(prefName) {
   console.log("The preference " + prefName + " value has changed!");
 }
 require("sdk/simple-prefs").on("AutoRun", onPrefChange);
+*/
 
 require("sdk/tabs").on("ready", runScript);
 

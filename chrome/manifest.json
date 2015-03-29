@@ -2,7 +2,7 @@
   "manifest_version": 2,
 
   "name": "Signup Block",
-  "description": "This add-on allows you to view the content of some websites without signing up. It currently supports Quora, Pinterest, and the National Post.",
+  "description": "View the content of some websites without signing up. This add-on currently supports Quora, Pinterest, and the National Post.",
   "version": "0.4",
   "icons": {
     "16": "icon-16.png",

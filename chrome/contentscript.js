@@ -1,6 +1,6 @@
-$(document).ready(function() {
 	
-		
+function remove() {
+	
 	var removeElement = function($element){
 		$element ? $element.remove() : null;
 	}
@@ -17,7 +17,7 @@ $(document).ready(function() {
 		removeList(itemsToRemove)
 	}
 	else if ((url).indexOf('pinterest') != -1){
-		var itemsToRemove = ['.modalScroller','.modalContainer','.modalMask'] 
+		var itemsToRemove = ['.modalScroller','.modalContainer','.modalMask', '.Modal'] 
 		removeList(itemsToRemove)
 		$("body").removeClass("noTouch noScroll")
 
@@ -83,5 +83,87 @@ $(document).ready(function() {
 		var itemsToRemove = ['.bcx_container', '#social-tools-panel_gig_containerParent']
 		removeList(itemsToRemove)
 	}
-	//'#bcx_98136_iframe_overlay', '.bcx_onsite_els', 
+	else if ((url).indexOf('billhowe') != -1){
+		var itemsToRemove = ['#ppop', '#pfade']
+		removeList(itemsToRemove)
+	}
+	else if ((url).indexOf('sfglobe') != -1){
+		var itemsToRemove = ['.dropdown', '.kfm_dialog', '.kfm_dialog_overlay']
+		removeList(itemsToRemove)
+	}
+	else if ((url).indexOf('maddyness') != -1){
+		var itemsToRemove = ['.fancybox-wrap', '.fancybox-desktop', '.fancybox-opened', '.fancybox-overlay']
+		removeList(itemsToRemove)
+	}
+	else if ((url).indexOf('privesc') != -1){
+		var itemsToRemove = ['.modal']
+		removeList(itemsToRemove)
+		$("body").removeClass("modal-open")
+	}
+	else if ((url).indexOf('facenews') != -1){
+		var itemsToRemove = ['.popup-banner', '.popup-holder', '.popup-time-banner']
+		removeList(itemsToRemove)
+	}
+	else if ((url).indexOf('sitepoint') != -1){
+		var itemsToRemove = ['.awesome-bar']
+		removeList(itemsToRemove)
+	}
+	else if ((url).indexOf('searchenginejournal') != -1){
+		var itemsToRemove = ['.optin-monster-overlay']
+		removeList(itemsToRemove)
+	}
+	else if ((url).indexOf('lemonde') != -1){
+		var itemsToRemove = ['.fond_overlay', 'offre_decouverte', '.overlay', '#footerMainDiv', '#footerDegrade']
+		removeList(itemsToRemove)
+	}
+	else if ((url).indexOf('evroua') != -1){
+		var itemsToRemove = ['.arcticmodal-container', '.arcticmodal-overlay']
+		removeList(itemsToRemove)
+		$('body').css('overflow', function(index) {
+			return index = 'visible';
+		});
+	}
+	else if ((url).indexOf('motherjones') != -1){
+		var itemsToRemove = ['.container']
+		removeList(itemsToRemove)
+	}
+	else if ((url).indexOf('sowefund') != -1){
+		var itemsToRemove = ['.modal', '.modal-overlay']
+		removeList(itemsToRemove)
+		$("body").removeClass("modalOpened")
+	}
+	else if ((url).indexOf('scoop') != -1){
+		var itemsToRemove = ['.post-on-overlay-container', '#viewboxOverlay']
+		removeList(itemsToRemove)
+	}
+	else if ((url).indexOf('devfright') != -1){
+		var itemsToRemove = ['.optin-monster-overlay']
+		removeList(itemsToRemove)
+	}
+
+}
+
+
+
+$(document).ready(function() {
+
+	remove();
+
+	setTimeout(function(){
+		remove()
+	}, 2000);
+
+	setTimeout(function(){
+		remove()
+	}, 4000);
+
+	setTimeout(function(){
+		remove()
+	}, 7500);
+
+	setTimeout(function(){
+		remove()
+	}, 10000);
+
 })
+

@@ -15,4 +15,19 @@ chrome.tabs.onUpdated.addListener(function (tab) {
 	});
 });
 
+chrome.commands.onCommand.addListener(function(command) {
+    chrome.storage.sync.get('doAuto', function(items) {
+    	if (items.doAuto == true) {
+    		chrome.storage.sync.set({
+			    doAuto: false
+			});
+    	}
+    	else {
+    		chrome.storage.sync.set({
+			    doAuto: true
+			});
+    	}
+    });
+});
+
 

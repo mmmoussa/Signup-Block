@@ -2,14 +2,14 @@
 	"name": "signup-block",
 	"title": "signup-block",
 	"id": "jid1-qbA1LkvFoEKD5A",
-	"description": "View the content of some websites without signing up. This add-on currently supports Quora, Pinterest, and the National Post.",
+	"description": "Remove signup dialogs and view the content of some websites without signing up.",
 	"author": "Mohamed Moussa and Matthew McLeod",
 	"license": "MPL 2.0",
-	"version": "0.4",
+	"version": "1.0",
 	"preferences": [{
         "name": "AutoRun",
-        "title": "Auto Launch",
-        "description": "Choose whether signup pages will be automatically removed when a page loads, or whether the user has manual control.",
+        "title": "Automatic Removal",
+        "description": "Choose whether signup pages will be automatically removed when a page loads, or whether the user has manual control. (Keyboard shortcut: Alt + T)",
         "type": "bool",
         "value": false
 	}]

@@ -35,3 +35,29 @@ var button = buttons.ActionButton({
   	});
 	}
 });
+
+// Define keyboard shortcuts for showing and hiding a custom panel.
+var { Hotkey } = require("sdk/hotkeys");
+
+var hotKeyRunScript = Hotkey({
+  combo: "alt-shift-x",
+  onPress: function() {
+    require("sdk/tabs").activeTab.attach({
+      contentScriptFile: [self.data.url("jquery-2.1.3.min.js"), self.data.url("contentscript.js")]
+    });
+  }
+});
+var hotKeyAuto = Hotkey({
+  combo: "alt-t",
+  onPress: function() {
+    var prefs = require('sdk/simple-prefs').prefs;
+    if (prefs.AutoRun == true) {
+      prefs.AutoRun = false;
+    }
+    else {
+      prefs.AutoRun = true;
+    };
+  }
+});
+
+

@@ -140,6 +140,24 @@ function remove() {
 		var itemsToRemove = ['.optin-monster-overlay']
 		removeList(itemsToRemove)
 	}
+	else if ((url).indexOf('imdb') != -1){
+		var itemsToRemove = ['#fixed_header']
+		removeList(itemsToRemove)
+	}
+	else if ((url).indexOf('fontawesome') != -1){
+		var itemsToRemove = ['.sumome-popup']
+		removeList(itemsToRemove)
+		$("body").removeClass("sumome-vex-open")
+	}
+	else if ((url).indexOf('inmotionhosting') != -1){
+		var itemsToRemove = ['#853_overlay_join_community']
+		removeList(itemsToRemove)
+	}
+	else if ((url).indexOf('ezzylynn') != -1){
+		var itemsToRemove = ['.fancybox-overlay', '#fancybox-overlay', '#fancybox-wrap', '#fancybox-tmp']
+		removeList(itemsToRemove)
+		$("html").removeClass("fancybox-lock")
+	}
 
 }
 

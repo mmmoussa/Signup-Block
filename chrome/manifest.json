@@ -2,8 +2,8 @@
   "manifest_version": 2,
 
   "name": "Signup Block",
-  "description": "View the content of some websites without signing up. This add-on currently supports Quora, Pinterest, and the National Post.",
-  "version": "0.4",
+  "description": "Remove signup dialogs and view the content of some websites without signing up.",
+  "version": "1.0",
   "icons": {
     "16": "icon-16.png",
     "48": "icon-48.png",
@@ -21,6 +21,23 @@
 
   "background": {
     "scripts": ["jquery-2.1.3.min.js", "background.js"]
+  },
+
+  "commands": {
+    "toggle-feature-foo": {
+      "suggested_key": {
+        "default": "Alt+T"
+      },
+      "description": "Toggle automatic signup removal feature"
+    },
+    "_execute_browser_action": {
+      "suggested_key": {
+        "windows": "Alt+Shift+X",
+        "mac": "Alt+Shift+X",
+        "chromeos": "Alt+Shift+X",
+        "linux": "Alt+Shift+X"
+      }
+    }
   },
 
   "permissions": [

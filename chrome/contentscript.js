@@ -158,6 +158,33 @@ function remove() {
 		removeList(itemsToRemove)
 		$("html").removeClass("fancybox-lock")
 	}
+	else if ((url).indexOf('iconfinder') != -1){
+		var itemsToRemove = ['.modal-container', '.modal-backdrop']
+		removeList(itemsToRemove)
+	}
+	else if ((url).indexOf('aplus') != -1){
+		var itemsToRemove = ['.modal', '.ng-cloak', '.modal-backdrop']
+		removeList(itemsToRemove)
+		$("body").removeClass("modal-open")
+	}
+	else if ((url).indexOf('foreignpolicy') != -1){
+		var itemsToRemove = ['.overlay-container-dark', '.overlay-the-week']
+		removeList(itemsToRemove)
+		$("body").removeClass("overlay-no-scroll")
+	}
+	else if ((url).indexOf('cl.ly') != -1){
+		var itemsToRemove = ['#ouibounce-modal']
+		removeList(itemsToRemove)
+	}
+	else if ((url).indexOf('fusion.net') != -1){
+		var itemsToRemove = ['.reveal-modal', '.reveal-modal-bg']
+		removeList(itemsToRemove)
+		$("html").removeClass("no-touch")
+	}
+	else if ((url).indexOf('mcmelectronics') != -1){
+		var itemsToRemove = ['#ltkmodal-container', '#ltkmodal-overlay']
+		removeList(itemsToRemove)
+	}
 
 }
 

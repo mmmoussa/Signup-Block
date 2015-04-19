@@ -5,7 +5,7 @@
 	"description": "Remove signup dialogs and view the content of some websites without signing up.",
 	"author": "Mohamed Moussa and Matthew McLeod",
 	"license": "MPL 2.0",
-	"version": "1.0",
+	"version": "1.1",
 	"preferences": [{
         "name": "AutoRun",
         "title": "Automatic Removal",

@@ -15,9 +15,11 @@ require("sdk/tabs").on("ready", runScript);
 function runScript(tab) {
   var auto = require('sdk/simple-prefs').prefs['AutoRun']
   if (auto == true) {
-    require("sdk/tabs").activeTab.attach({
-      contentScriptFile: [self.data.url("jquery-2.1.3.min.js"), self.data.url("contentscript.js")]
-    });
+    if (require("sdk/tabs").activeTab.url != "about:newtab") {
+      require("sdk/tabs").activeTab.attach({
+        contentScriptFile: [self.data.url("jquery-2.1.3.min.js"), self.data.url("contentscript.js")]
+      });
+    };
   };
 }
 
@@ -30,9 +32,11 @@ var button = buttons.ActionButton({
   	"64": "./icon-64.png"
   },
 	onClick: function() {
-  	require("sdk/tabs").activeTab.attach({
-    	contentScriptFile: [self.data.url("jquery-2.1.3.min.js"), self.data.url("contentscript.js")]
-  	});
+    if (require("sdk/tabs").activeTab.url != "about:newtab") {
+      require("sdk/tabs").activeTab.attach({
+        contentScriptFile: [self.data.url("jquery-2.1.3.min.js"), self.data.url("contentscript.js")]
+      });
+    };
 	}
 });
 
